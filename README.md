@@ -1,5 +1,3 @@
-# README for Github
-
 # Proyecto Final Equipo 3
 
 - Descripción del Sitio
