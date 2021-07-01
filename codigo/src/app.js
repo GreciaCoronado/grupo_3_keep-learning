@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 80;
 app.set("view engine","ejs");
 
 app.listen(PORT,function(){
-    console.log("Servidor listo, corriendo en puerto 3000");
+    console.log("Servidor listo, corriendo en puerto 80");
 });
 
 app.use(express.static(path.resolve(__dirname +"/../public")));
