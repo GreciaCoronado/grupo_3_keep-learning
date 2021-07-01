@@ -34,7 +34,7 @@ app.get("/login",(req,res) => {
     res.render(path.resolve(__dirname,"./views/users/login.ejs"),{title:"Inicia Sesión"});
 });
 app.get("/",(req,res) => {
-    res.render(path.resolve(__dirname,"./views/home.ejs"),{title:"Inicio"});
+    res.render(path.resolve(__dirname,"./views/home.ejs",{title:"Inicio"}));
 });
 
 app.get("/productDetail",(req,res) => {
