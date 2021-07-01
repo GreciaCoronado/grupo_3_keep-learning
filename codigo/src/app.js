@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine","ejs")
 
 app.listen(PORT,function(){
-    console.log("Servidor listo");
+    console.log("Servidor listo, corriendo en puerto 3000");
 });
 
 app.use(express.static(path.resolve(__dirname,"../public")));
@@ -16,6 +16,12 @@ app.post('/home', (req, res) => {
     res.render('./home.html', { root: 'views'})
 });
 
+app.get("/editCourse",(req,res) => {
+    res.render(path.resolve(__dirname,"./views/products/formProducts.ejs"),{title:"Editar Curso"})
+});
+app.get("/createCourse",(req,res) => {
+    res.render(path.resolve(__dirname,"./views/products/formProducts.ejs"),{title:"Crear Curso"})
+});
 app.get("/productCart",(req,res) => {
     res.render(path.resolve(__dirname,"./views/products/productCart.ejs"),{title:"Carrito de compras"});
 });
