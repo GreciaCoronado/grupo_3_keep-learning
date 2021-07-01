@@ -9,7 +9,7 @@ app.listen(PORT,function(){
     console.log("Servidor listo, corriendo en puerto 3000");
 });
 
-app.use(express.static(path.resolve(__dirname,"../public")));
+app.use(express.static(path.resolve(__dirname +"/../public")));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false})); 
