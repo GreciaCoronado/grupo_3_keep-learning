@@ -965,3 +965,6 @@ input[type="checkbox"]:checked + .menu-options{
     width: 40px;
     height: 40px;
 }
+section {
+    padding-top:180px;
+}
