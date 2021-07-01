@@ -8,9 +8,16 @@
     <title>Detalle de producto</title>
 </head> -->
 <%- include("../partials/head.ejs")%>
+
 <body>
     <!--Navbar-->
     <%- include("../partials/header.ejs")%>
+    <section>
+        <h3>Vista previa del curso</h3>
+        <a href="/createCourse" target="_parent"><button class = "botonesSuperiores">Agregar nuevo</button></a>
+        <a href="/editCourse" target="_parent"><button class = "botonesSuperiores">Editar curso</button></a>
+        <a href="/#" target="_parent"><button class = "botonesSuperiores">Borrar curso</button></a>
+    </section>
     <h5 class="Breadcrumb">
         <a href="#">Inicio</a> > <a href="#">Programación</a> > <a href="#"> Python</a>
     </h5>
