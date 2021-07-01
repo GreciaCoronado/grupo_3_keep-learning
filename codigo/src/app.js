@@ -3,30 +3,32 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 
+app.set("view engine","ejs")
+
 app.listen(PORT,function(){
     console.log("Servidor listo");
 });
 
-app.use(express.static(path.resolve(__dirname,"./public")));
+app.use(express.static(path.resolve(__dirname,"../public")));
 
 app.post('/home', (req, res) => {
     console.log(req.body)
-    res.sendFile('./home.html', { root: 'views' })
+    res.render('./home.html', { root: 'views'})
 });
 
 app.get("/productCart",(req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/productCart.html"));
+    res.render(path.resolve(__dirname,"./views/products/productCart.ejs"),{title:"Carrito de compras"});
 });
 app.get("/register",(req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/register.html"));
+    res.render(path.resolve(__dirname,"./views/users/register.ejs"),{title:"Registro"});
 });
 app.get("/login",(req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/login.html"));
+    res.render(path.resolve(__dirname,"./views/users/login.ejs"),{title:"Inicia Sesión"});
 });
 app.get("/",(req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/home.html"));
+    res.render(path.resolve(__dirname,"./views/home.ejs"),{title:"Inicio"});
 });
 
 app.get("/productDetail",(req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
+    res.render(path.resolve(__dirname,"./views/products/productDetail.ejs"),{title:"Detalle de producto"});
 });

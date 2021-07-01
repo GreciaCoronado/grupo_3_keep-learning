@@ -1,60 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
-    rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
-    <title>Inicio</title>
-</head>
+<%- include("./partials/head.ejs") %> 
 <body>
     <!--Navbar-->
-    <header class="header-not-logged-in">
-        <!--Boton menu-->
-        <div class="div-btn-menu">
-            <label for="show-menu">
-                <img src="images/icons/Hamburguesa.svg" alt="Menu principal" class="btn-menu">
-            </label>
-        </div>
-        <input type="checkbox" id="show-menu" hidden>
-        <!--Opciones del menu-->
-        <div class="menu-options">
-            <a href="#logout">Cerrar Sesion</a>
-            <a href="#profile">Mi Perfil</a>
-            <a href="#purchases-history">Historial de Compras</a>
-        </div>
-
-        <!--Logo-->
-        <div class="logo-container">
-            <a href="/">
-                <img src="images/icons/Logo-KeepLearning.svg" alt="logo-kl" class="logo">
-            </a>
-        </div>
-
-        <!--Botón de búsqueda-->
-        <div class="div-btn-search">
-            <label for="show-search">
-                <img src="images/icons/Buscar.svg" alt="Botón búsqueda" class="btn-search">
-            </label>
-        </div>
-        <input type="checkbox" id="show-search" hidden>
-
-        <!--Botón carrito-->
-        
-        <div class="div-btn-cart">
-            <label for="show-cart">
-                <a href="/productCart">
-                <img src="images/icons/Carrito.svg" alt="Botón carrito de compras" class="btn-cart">
-            </a>
-            </label>
-        </div>
-        <input type="checkbox" id="show-cart" hidden>
-
-    </header>
-
+    <%- include("./partials/header.ejs") %>
     <!--Seccion Principal-->
     <section class="section-main">
         <div class="img-principal-div">
@@ -90,7 +37,7 @@
                 <h3 class="CarouselName">Ciencia de Datos</h3>
             </div>
             <div id="mobile">
-                <h3 class="CarouselName">Desarrollo Móbil</h3>
+                <h3 class="CarouselName">Desarrollo Móvil</h3>
             </div>
         </div>
         <!--Programacion-->
@@ -233,39 +180,6 @@
                 </article>
             </section>
         </section>
-    
-    <footer>
-        <div class="FooterContainer">
-            <div class="Empresa">
-                <h5 class="FooterTitle">Empresa</h5>
-                <h6 class="FooterItem">¿Quiénes somos?</h6>
-                <h6 class="FooterItem">¿Qué ofrecemos?</h6>
-                <h6 class="FooterItem">Historia</h6>
-                <h6 class="FooterItem">Catálogo de cursos</h6>
-                <h6 class="FooterItem">Trabaja con nosotros</h6>
-            </div>
-            <div class="Legal">
-                <h5 class="FooterTitle">Legal</h5>
-                <h6 class="FooterItem">Política de privacidad</h6>
-                <h6 class="FooterItem">Términos y condiciones de uso</h6>
-            </div>
-            <div class="Contactanos">
-                <h5 class="FooterTitle">Contáctanos</h5>
-                <h6 class="FooterItem">Blog</h6>
-                <h6 class="FooterItem">Ayuda y asistencia</h6>
-                <h6 class="FooterItem">Soy universidad</h6>
-                <h6 class="FooterItem">Soy empresa</h6>
-            </div>
-            <div class="Social">
-                <img src="/images/icons/Logo-Facebook.svg" alt="Facebook" height="32px" width="32px">
-                <img src="/images/icons/Logo-Instagram.svg" class="InstagramLogo" alt="Instagram" height="32px" width="32px">
-                <img src="/images/icons/Logo-LinkedIn.svg" alt="LinkedIn" height="32px" width="32px">
-            </div>
-            <div class="Logo">
-                <img src="/images/icons/Logo-KeepLearning.svg" alt="KeepLearning.svg">
-            </div>
-        </div>
-        <small class="FooterEnding">©2021, Keep Learning. Todos los derechos reservados.</small>
-    </footer>
+        <%- include("./partials/footer.ejs") %>
 </body>
 </html>
