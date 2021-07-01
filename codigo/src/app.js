@@ -13,11 +13,6 @@ app.use(express.static(path.resolve(__dirname,"../public")));
 app.use(express.json());
 app.use(express.urlencoded({extended: false})); 
 
-app.post('/home', (req, res) => {
-    console.log(req.body)
-    res.render('./home.html', { root: 'views'})
-});
-
 app.get("/editCourse",(req,res) => {
     res.render(path.resolve(__dirname,"./views/products/formProducts.ejs"),{title:"Editar Curso"})
 });
@@ -34,7 +29,7 @@ app.get("/login",(req,res) => {
     res.render(path.resolve(__dirname,"./views/users/login.ejs"),{title:"Inicia Sesión"});
 });
 app.get("/",(req,res) => {
-    res.render(path.resolve(__dirname,"./views/home.ejs",{title:"Inicio"}));
+    res.render(path.resolve(__dirname,"./views/home.ejs"),{title:"Inicio"});
 });
 
 app.get("/productDetail",(req,res) => {
