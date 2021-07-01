@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 80;
 
-app.set("view engine","ejs")
+app.set("view engine","ejs");
 
 app.listen(PORT,function(){
     console.log("Servidor listo, corriendo en puerto 3000");
