@@ -965,6 +965,17 @@ input[type="checkbox"]:checked + .menu-options{
     width: 40px;
     height: 40px;
 }
-section {
-    padding-top:180px;
+section.adminView {
+    padding-top:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.botonesSuperiores{
+    margin:8px;
+    width:30vw;
+}
+section.adminView > h3 {
+    width: 100%;
 }
